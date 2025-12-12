@@ -1,0 +1,78 @@
+ /* Custom styles for the calculator */
+        body{
+            font-family: Inter, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f4f8;
+        }
+        /* To ensure the calculator is centered and well structured */
+        .calculator-grid{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 1rem;
+            max-width: 400px;
+            width:90%;
+            padding: 1.5rem;
+            background-color: #1a202c;
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3); 
+            box-shadow: 0 10px 10px -5px rgba(0,0,0,0.1); 
+           
+        }
+        .output{
+            grid-column: 1/-1; /*spans all column */
+            background-color: rgba(0,0,0, 0.75);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: space-around;
+            padding: 1rem;
+           word-wrap: break-word;   /*This will wrap long numbers */
+           word-break: break-all;   /*This will break words if necessary */
+           border-radius: 0.75rem;
+           min-height: 80px;
+        }
+        .output .previous-operand{
+            color:rgba(255,255,255,0.75);
+            font-size: 1.5rem;
+        }
+        .output .current-operand {
+            color:white;
+            font-size: 2.5rem;
+        }
+        .calculator-grid>button{
+            cursor: pointer;
+            font-size: 1.75rem;
+            outline: none;
+            background-color: rgba(255,255,255,0.1);
+            border: none;
+            border-radius: 1rem;
+            padding: 1rem 0.5rem;
+            transition: background-color, 0.2s, ease-in-out, transform;
+            color: white;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0, 0.1);
+            box-shadow: 0 2px 4px -1px rgba(0,0,0, 0.06);
+        }
+        .calculator-grid>button:hover{
+            background-color: rgba(255,255,255,0.2);
+            transform: translateY(-2px);  /* slightly lift on hover */
+        }
+        .calculator-grid>button:active{
+            transform: translateY(0);
+            box-shadow: none;
+        }
+        .span-2{
+            grid-column: span 2;
+        }
+        .operator-btn{
+            background-color: #ff9f43;
+        }
+        .equals-btn{
+            background-color: #4caf50;
+        }
+        .clear-btn{
+            background-color: #e74c3c;
+        }
+        
